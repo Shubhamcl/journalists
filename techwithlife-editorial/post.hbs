@@ -1,0 +1,38 @@
+{{!< default}}
+
+{{#post}}
+<main class="site-main">
+    <article class="article-shell {{post_class}}">
+        <header class="article-header container-narrow">
+            <div class="article-meta">
+                {{#if primary_tag}}<a href="{{primary_tag.url}}">{{primary_tag.name}}</a>{{else}}Story{{/if}}
+                <span aria-hidden="true">/</span>
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                <span aria-hidden="true">/</span>
+                <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+            </div>
+            <h1>{{title}}</h1>
+            {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+        </header>
+
+        {{#if feature_image}}
+            <figure class="article-hero">
+                {{> "responsive-image" image_class="article-hero-image"}}
+                {{#if feature_image_caption}}<figcaption>{{feature_image_caption}}</figcaption>{{/if}}
+            </figure>
+        {{/if}}
+
+        <div class="container article-layout">
+            {{> "article-left-rail"}}
+
+            <section class="content-body gh-content">
+                {{content}}
+            </section>
+
+            {{> "article-right-rail"}}
+        </div>
+    </article>
+
+    {{> "read-next"}}
+</main>
+{{/post}}

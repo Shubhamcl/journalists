@@ -1,0 +1,19 @@
+<aside class="article-rail article-rail-right">
+    <div class="rail-block progress-block">
+        <span class="rail-label">Reading progress</span>
+        <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" data-reading-progress></div>
+        </div>
+    </div>
+
+    {{#if tags}}
+        <div class="rail-block">
+            <span class="rail-label">Filed under</span>
+            <div class="tag-list">
+                {{#foreach tags}}
+                    <a href="{{url}}">{{name}}</a>
+                {{/foreach}}
+            </div>
+        </div>
+    {{/if}}
+</aside>

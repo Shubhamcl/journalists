@@ -1,0 +1,24 @@
+{{!< default}}
+
+{{#post}}
+<main class="site-main">
+    <article class="page-shell {{post_class}}">
+        {{#if @page.show_title_and_feature_image}}
+            <header class="article-header container-narrow">
+                <h1>{{title}}</h1>
+                {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+            </header>
+
+            {{#if feature_image}}
+                <figure class="article-hero page-hero">
+                    {{> "responsive-image" image_class="article-hero-image"}}
+                </figure>
+            {{/if}}
+        {{/if}}
+
+        <section class="content-body gh-content page-content">
+            {{content}}
+        </section>
+    </article>
+</main>
+{{/post}}

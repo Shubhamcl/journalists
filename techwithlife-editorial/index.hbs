@@ -1,0 +1,74 @@
+{{!< default}}
+
+<main class="site-main">
+    <div class="container">
+        {{#get "posts" filter="featured:true" include="tags,authors" limit="1" as |featured_posts|}}
+            {{#if featured_posts}}
+                {{#foreach featured_posts}}
+                    {{> "hero-post"}}
+                {{/foreach}}
+            {{else}}
+                {{#foreach ../posts limit="1"}}
+                    {{> "hero-post"}}
+                {{/foreach}}
+            {{/if}}
+        {{/get}}
+
+        <div class="rule rule-heavy"></div>
+
+        <section class="editorial-grid" aria-label="Latest stories">
+            <div class="column column-bordered-right">
+                {{#foreach posts from="2" to="3"}}
+                    {{> "post-card" card_class="stacked" title_size="small"}}
+                {{/foreach}}
+            </div>
+
+            <div class="column column-bordered-right">
+                {{#foreach posts from="4" to="4"}}
+                    {{> "post-card" card_class="lead" title_size="large"}}
+                {{else}}
+                    {{#foreach posts from="2" to="2"}}
+                        {{> "post-card" card_class="lead" title_size="large"}}
+                    {{/foreach}}
+                {{/foreach}}
+            </div>
+
+            <aside class="column index-column" aria-label="The Index">
+                <h2 class="index-title">The<br>Index</h2>
+                {{#foreach posts from="2" to="6"}}
+                    <article class="index-item">
+                        <span class="index-number">{{@number}}</span>
+                        <div>
+                            <h3><a href="{{url}}">{{title}}</a></h3>
+                            <p>{{#if primary_tag}}{{primary_tag.name}}{{else}}Latest{{/if}}</p>
+                        </div>
+                    </article>
+                {{/foreach}}
+            </aside>
+        </section>
+
+        {{#match @custom.dark_feature_band true}}
+            {{#foreach posts from="5" to="5"}}
+                <section class="feature-band">
+                    <div class="feature-band-content">
+                        <p class="eyebrow">{{#if primary_tag}}{{primary_tag.name}}{{else}}Feature{{/if}}</p>
+                        <h2><a href="{{url}}">{{title}}</a></h2>
+                        {{#if excerpt}}<p>{{excerpt words="32"}}</p>{{/if}}
+                        <a class="text-link inverted" href="{{url}}">Read the story</a>
+                    </div>
+                    {{#if feature_image}}
+                        <a class="feature-band-image" href="{{url}}" aria-label="{{title}}">
+                            {{> "responsive-image" image_class="feature-image"}}
+                        </a>
+                    {{/if}}
+                </section>
+            {{/foreach}}
+        {{/match}}
+
+        {{> "topic-section" section_title="Reports" tag_slug="reports"}}
+        {{> "topic-section" section_title="AI" tag_slug="ai"}}
+        {{> "topic-section" section_title="Guides" tag_slug="buying-guides"}}
+        {{> "topic-section" section_title="Reviews" tag_slug="reviews"}}
+        {{> "topic-section" section_title="Life" tag_slug="life"}}
+    </div>
+</main>

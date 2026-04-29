@@ -1,0 +1,557 @@
+<html lang="en" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">The Protocol - Tech Editorial</title>
+    
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" vid="5">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" vid="6">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" vid="7">
+
+    <style vid="8">
+        :root {
+            --bg-color: #FAFAFA;
+            --text-main: #0A0A0A;
+            --text-muted: #555555;
+            --border-color: #E0E0E0;
+            --border-heavy: #0A0A0A;
+            
+            --font-headline: 'Instrument Serif', serif;
+            --font-ui: 'Inter', sans-serif;
+            
+            --grid-gap: 2rem;
+            --page-margin: 4vw;
+            --header-height: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-ui);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        
+        h1, h2, h3, h4, .serif {
+            font-family: var(--font-headline);
+            font-weight: 400;
+            line-height: 1.1;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .meta span.label {
+            color: var(--text-muted);
+        }
+
+        
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--page-margin);
+        }
+
+        .divider-h {
+            width: 100%;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 2rem 0;
+        }
+
+        .divider-h.heavy {
+            height: 2px;
+            background-color: var(--border-heavy);
+            margin: 3rem 0;
+        }
+
+        
+        header {
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 var(--page-margin);
+            position: sticky;
+            top: 0;
+            background-color: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: var(--font-headline);
+            font-size: 2rem;
+            font-style: italic;
+            letter-spacing: -0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .subscribe-btn {
+            border: 1px solid var(--text-main);
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .subscribe-btn:hover {
+            background-color: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        
+        main {
+            padding: 2rem 0 6rem;
+        }
+
+        
+        .hero-spread {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            gap: var(--grid-gap);
+            margin-bottom: 4rem;
+            align-items: end;
+        }
+
+        .hero-text {
+            padding-right: 2rem;
+            border-right: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hero-text .meta {
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 6vw, 6.5rem);
+            line-height: 0.95;
+            margin-bottom: 2rem;
+            text-wrap: balance;
+        }
+
+        .hero-excerpt {
+            font-size: 1.125rem;
+            color: var(--text-main);
+            max-width: 45ch;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+            filter: contrast(1.1) saturate(0.9);
+        }
+
+        
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: var(--grid-gap);
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .col-border-right {
+            border-right: 1px solid var(--border-color);
+            padding-right: var(--grid-gap);
+        }
+
+        .col-border-left {
+            border-left: 1px solid var(--border-color);
+            padding-left: var(--grid-gap);
+        }
+
+        
+        .article-module {
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-module.horizontal {
+            flex-direction: row;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .article-module.horizontal .am-image {
+            width: 40%;
+            aspect-ratio: 4/3;
+            margin-bottom: 0;
+        }
+
+        .am-image {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .am-meta {
+            margin-bottom: 0.5rem;
+        }
+
+        .am-title {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .am-title.small {
+            font-size: 1.5rem;
+        }
+        
+        .am-title.large {
+            font-size: 3.5rem;
+        }
+
+        .am-excerpt {
+            margin-bottom: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        
+        .numbered-list-header {
+            font-family: var(--font-headline);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 0.5rem;
+        }
+
+        .numbered-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .numbered-item:last-child {
+            border-bottom: none;
+        }
+
+        .ni-number {
+            font-family: var(--font-headline);
+            font-size: 2.5rem;
+            line-height: 0.8;
+            color: var(--text-main);
+        }
+
+        .ni-content .am-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            margin-top: -0.2rem;
+        }
+
+        
+        .feature-spread {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--grid-gap);
+            margin: 4rem 0;
+        }
+
+        .fs-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .fs-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 4rem 2rem 2rem;
+            background-color: #111;
+            color: #eee;
+        }
+
+        .fs-content .meta, .fs-content .meta span.label {
+            color: #aaa;
+        }
+
+        .fs-content .am-title {
+            font-size: 4rem;
+            color: #fff;
+        }
+
+        .fs-content p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        
+        .drop-cap:first-letter {
+            float: left;
+            font-family: var(--font-headline);
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-top: 0.2rem;
+            padding-right: 0.5rem;
+            color: var(--text-main);
+        }
+
+        
+        @media (max-width: 1024px) {
+            .hero-spread {
+                grid-template-columns: 1fr;
+            }
+            .hero-text {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid var(--border-color);
+                padding-bottom: 2rem;
+            }
+            .hero-image {
+                height: 50vh;
+            }
+            .editorial-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .column.col-border-left {
+                grid-column: 1 / -1;
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid var(--border-color);
+                padding-top: 2rem;
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+            .column.col-border-right {
+                border-right: none;
+                padding-right: 0;
+            }
+            .feature-spread {
+                grid-template-columns: 1fr;
+            }
+            .fs-content {
+                padding: 2rem;
+            }
+            .article-module.horizontal {
+                flex-direction: column;
+            }
+            .article-module.horizontal .am-image {
+                width: 100%;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body vid="9">
+
+    <header vid="10">
+        <div class="logo" vid="11">The Protocol</div>
+        <nav class="nav-links" vid="12">
+            <a href="#" vid="13">Systems</a>
+            <a href="#" vid="14">Hardware</a>
+            <a href="#" vid="15">Theory</a>
+            <a href="#" vid="16">Culture</a>
+        </nav>
+        <a href="#" class="subscribe-btn" vid="17">Subscribe</a>
+    </header>
+
+    <main class="container" vid="18">
+        
+        
+        <section class="hero-spread" vid="19">
+            <div class="hero-text" vid="20">
+                <div vid="21">
+                    <div class="meta" vid="22">
+                        <span class="label" vid="23">Issue 42</span> • <span vid="24">October 2023</span>
+                    </div>
+                    <h1 class="hero-title" vid="25">The Silent Architecture of Neural Networks</h1>
+                </div>
+                <div vid="26">
+                    <p class="hero-excerpt drop-cap" vid="27">Deep learning models have evolved beyond mere algorithms into vast, opaque topologies. We map the unseen structures governing tomorrow's intelligence, where parameter counts rival the synapses of organic brains.</p>
+                    <div class="meta" style="margin-top: 1.5rem; margin-bottom: 0;" vid="28">
+                        <span vid="29">By Dr. Aris Thorne</span>
+                    </div>
+                </div>
+            </div>
+            <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2" alt="Abstract metallic structure" class="hero-image" vid="30">
+        </section>
+
+        <div class="divider-h heavy" vid="31"></div>
+
+        
+        <section class="editorial-grid" vid="32">
+            
+            
+            <div class="column col-border-right" vid="33">
+                <div class="article-module" vid="34">
+                    <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=600&amp;dpr=2" alt="Server room cables" class="am-image" vid="35">
+                    <div class="meta am-meta" vid="36">Hardware</div>
+                    <h2 class="am-title small" vid="37">Silicon &amp; Sand: The New Resource War</h2>
+                    <p class="am-excerpt" vid="38">As fabrication node sizes shrink to atomic scales, the geopolitical landscape shifts toward control over rare earth elements and specialized manufacturing facilities.</p>
+                </div>
+
+                <div class="divider-h" style="margin: 1.5rem 0;" vid="39"></div>
+
+                <div class="article-module" vid="40">
+                    <div class="meta am-meta" vid="41">Culture</div>
+                    <h2 class="am-title small" vid="42">The Death of the Chronological Feed</h2>
+                    <p class="am-excerpt" vid="43">Algorithmic curation has entirely supplanted temporal timelines. A look at how engagement metrics reshaped human perception of events.</p>
+                </div>
+            </div>
+
+            
+            <div class="column col-border-right" vid="44">
+                <div class="article-module" vid="45">
+                    <div class="meta am-meta" vid="46"><span vid="47">Feature Essay</span> • <span vid="48">12 Min Read</span></div>
+                    <h2 class="am-title large" style="margin-bottom: 1.5rem;" vid="49">Designing for Disconnection</h2>
+                    <img src="https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=800&amp;dpr=2" alt="Minimalist concrete room" class="am-image" style="aspect-ratio: 16/9; margin-bottom: 1.5rem;" vid="50">
+                    <p style="column-count: 2; column-gap: 2rem; text-align: left; margin-bottom: 0;" vid="51">
+                        In an era defined by ubiquitous connectivity, a counter-movement is emerging in industrial design. Devices are being intentionally engineered to limit access, enforce downtime, and sever the constant tether to the cloud. This 'offline-first' hardware isn't about Luddism; it's a premium offering for cognitive focus. 
+                        <br vid="52"><br vid="53">
+                        Engineers at radical startups are stripping away Wi-Fi modules and cellular radios, leaving only localized computing power. The resulting artifacts feel less like appliances and more like high-fidelity tools—calculators, dedicated word processors, isolated audio environments. The luxury of the 21st century might not be access, but the ability to definitively log off while remaining productive.
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="column" vid="54">
+                <h3 class="numbered-list-header" vid="55">Trending<br vid="56">Index</h3>
+                
+                <div class="numbered-item" vid="57">
+                    <div class="ni-number" vid="58">1</div>
+                    <div class="ni-content" vid="59">
+                        <h4 class="am-title" vid="60">Quantum Supremacy Claimed Again</h4>
+                        <div class="meta" vid="61">Systems</div>
+                    </div>
+                </div>
+
+                <div class="numbered-item" vid="62">
+                    <div class="ni-number" vid="63">2</div>
+                    <div class="ni-content" vid="64">
+                        <h4 class="am-title" vid="65">The Open Source LLM Dilemma</h4>
+                        <div class="meta" vid="66">Theory</div>
+                    </div>
+                </div>
+
+                <div class="numbered-item" vid="67">
+                    <div class="ni-number" vid="68">3</div>
+                    <div class="ni-content" vid="69">
+                        <h4 class="am-title" vid="70">Europa Clipper Readies for Launch</h4>
+                        <div class="meta" vid="71">Space</div>
+                    </div>
+                </div>
+
+                <div class="numbered-item" vid="72">
+                    <div class="ni-number" vid="73">4</div>
+                    <div class="ni-content" vid="74">
+                        <h4 class="am-title" vid="75">Re-evaluating Web3 Infrastructure</h4>
+                        <div class="meta" vid="76">Networks</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section class="feature-spread" vid="77">
+            <div class="fs-content" vid="78">
+                <div class="meta am-meta" vid="79">Exclusive Interview</div>
+                <h2 class="am-title" vid="80">"Code is just structured intent."</h2>
+                <p vid="81">We sit down with the architect of the globally adopted decentralized protocol to discuss the philosophy of immutable ledgers and the future of trustless systems.</p>
+            </div>
+            <img src="https://images.pexels.com/photos/17483868/pexels-photo-17483868/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-by-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-pr.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=1200&amp;dpr=2" alt="Abstract neural network rendering" class="fs-image" vid="82">
+        </section>
+
+        <div class="divider-h" vid="83"></div>
+
+        
+        <section style="margin-top: 4rem;" vid="84">
+            <h2 class="am-title" style="font-size: 2.5rem; margin-bottom: 2rem;" vid="85">Deep Dives</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--grid-gap);" vid="86">
+                
+                <div class="article-module horizontal" vid="87">
+                    <img src="https://images.pexels.com/photos/8438918/pexels-photo-8438918.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=600&amp;dpr=2" alt="Microchip close up" class="am-image" vid="88">
+                    <div vid="89">
+                        <div class="meta am-meta" vid="90">Hardware</div>
+                        <h3 class="am-title small" style="font-size: 1.25rem;" vid="91">The Architecture of ARM</h3>
+                        <p class="am-excerpt" vid="92">How reduced instruction set computing conquered the mobile world and is now aiming for the data center.</p>
+                    </div>
+                </div>
+
+                <div class="article-module horizontal" vid="93">
+                    <img src="https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800&amp;h=600&amp;dpr=2" alt="Code on screen" class="am-image" vid="94">
+                    <div vid="95">
+                        <div class="meta am-meta" vid="96">Systems</div>
+                        <h3 class="am-title small" style="font-size: 1.25rem;" vid="97">Rust in the Kernel</h3>
+                        <p class="am-excerpt" vid="98">The controversial but inevitable integration of memory-safe languages into the Linux ecosystem.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+</body></html>

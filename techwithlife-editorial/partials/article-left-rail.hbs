@@ -1,0 +1,18 @@
+<aside class="article-rail article-rail-left">
+    <div class="rail-block">
+        <span class="rail-label">Written by</span>
+        {{#primary_author}}
+            <h2><a href="{{url}}">{{name}}</a></h2>
+            {{#if bio}}<p>{{bio}}</p>{{/if}}
+        {{/primary_author}}
+    </div>
+
+    <div class="rail-block">
+        <span class="rail-label">Share</span>
+        <div class="share-links">
+            <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}" target="_blank" rel="noopener">X</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank" rel="noopener">Facebook</a>
+            <button type="button" data-copy-url="{{url absolute="true"}}">Link</button>
+        </div>
+    </div>
+</aside>

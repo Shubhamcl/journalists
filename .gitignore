@@ -1,0 +1,23 @@
+.env
+.env.*
+!.env.example
+
+.DS_Store
+**/.DS_Store
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*.log
+*.pid
+
+# Generated preview/build artifacts
+*.zip
+techwithlife-editorial-local-*.png
+
+# Local Ghost/runtime data
+.ghost/
+.ghostpid
+content/data/

@@ -1,0 +1,24 @@
+{{!< default}}
+
+{{#author}}
+<main class="site-main">
+    <header class="archive-header container">
+        {{#if profile_image}}
+            <img class="archive-author-image" src="{{img_url profile_image size="s"}}" alt="{{name}}">
+        {{/if}}
+        <p class="eyebrow">Author</p>
+        <h1>{{name}}</h1>
+        {{#if bio}}<p>{{bio}}</p>{{/if}}
+    </header>
+
+    <section class="container archive-grid">
+        {{#foreach ../posts}}
+            {{> "post-card" card_class="archive-card" title_size="small"}}
+        {{/foreach}}
+    </section>
+
+    <div class="container">
+        {{pagination}}
+    </div>
+</main>
+{{/author}}

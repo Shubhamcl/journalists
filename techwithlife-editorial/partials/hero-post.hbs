@@ -1,0 +1,23 @@
+<section class="hero-spread {{#unless feature_image}}no-hero-image{{/unless}}">
+    <div class="hero-copy">
+        <div>
+            <p class="hero-meta">
+                {{#if primary_tag}}<a href="{{primary_tag.url}}">{{primary_tag.name}}</a>{{else}}Latest{{/if}}
+                <span aria-hidden="true">/</span>
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                <span aria-hidden="true">/</span>
+                <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+            </p>
+            <h1><a href="{{url}}">{{title}}</a></h1>
+        </div>
+        <div>
+            {{#if excerpt}}<p class="hero-excerpt">{{excerpt words="38"}}</p>{{/if}}
+            {{#primary_author}}<p class="hero-author">By <a href="{{url}}">{{name}}</a></p>{{/primary_author}}
+        </div>
+    </div>
+    {{#if feature_image}}
+        <a class="hero-media" href="{{url}}" aria-label="{{title}}">
+            {{> "responsive-image" image_class="hero-image" eager=true}}
+        </a>
+    {{/if}}
+</section>

@@ -1,0 +1,52 @@
+{
+  "name": "techwithlife-editorial",
+  "description": "An editorial Ghost theme for Tech With Life.",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ghost",
+    "ghost-theme",
+    "editorial",
+    "magazine"
+  ],
+  "author": {
+    "name": "Tech With Life",
+    "email": "editor@techwithlife.com"
+  },
+  "config": {
+    "posts_per_page": 12,
+    "card_assets": true,
+    "image_sizes": {
+      "xs": {
+        "width": 160
+      },
+      "s": {
+        "width": 320
+      },
+      "m": {
+        "width": 720
+      },
+      "l": {
+        "width": 1200
+      },
+      "xl": {
+        "width": 2000
+      }
+    },
+    "custom": {
+      "sticky_header": {
+        "type": "boolean",
+        "default": true,
+        "description": "Keep the site header fixed while scrolling."
+      },
+      "dark_feature_band": {
+        "type": "boolean",
+        "default": true,
+        "description": "Use the dark magazine-style feature band on the homepage."
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ghost SEO Publisher"
+  short_description: "Write and dedupe Ghost SEO drafts"
+  default_prompt: "Use $ghost-seo-publisher to check my Ghost site for duplicate topics and create a new SEO article draft only if the topic is distinct."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,12 @@
+<footer class="site-footer">
+    <div class="site-footer-inner">
+        <div>
+            <a class="site-footer-logo" href="{{@site.url}}">{{@site.title}}</a>
+            {{#if @site.description}}<p>{{@site.description}}</p>{{/if}}
+        </div>
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+            {{navigation type="secondary"}}
+        </nav>
+        <p class="site-copyright">{{@site.title}} &copy; {{date format="YYYY"}}. Published with Ghost.</p>
+    </div>
+</footer>

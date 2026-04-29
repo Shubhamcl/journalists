@@ -1,0 +1,22 @@
+<article class="post-card {{card_class}} {{post_class}}">
+    <a class="post-card-link" href="{{url}}">
+        {{#if feature_image}}
+            <figure class="post-card-media">
+                {{> "responsive-image" image_class="post-card-image"}}
+            </figure>
+        {{/if}}
+        <div class="post-card-body">
+            <p class="card-meta">
+                {{#if primary_tag}}<span>{{primary_tag.name}}</span>{{else}}<span>Latest</span>{{/if}}
+                <span aria-hidden="true">/</span>
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+            </p>
+            <h2 class="post-card-title {{title_size}}">{{title}}</h2>
+            {{#if excerpt}}<p class="post-card-excerpt">{{excerpt words="24"}}</p>{{/if}}
+            <footer class="post-card-footer">
+                {{#primary_author}}<span>{{name}}</span>{{/primary_author}}
+                <span>{{reading_time minute=(t "1 min") minutes=(t "% min")}}</span>
+            </footer>
+        </div>
+    </a>
+</article>
