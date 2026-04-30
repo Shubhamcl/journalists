@@ -16,6 +16,7 @@ yarn-error.log*
 # Generated preview/build artifacts
 *.zip
 techwithlife-editorial-local-*.png
+live-techwithlife-*.png
 
 # Local Ghost/runtime data
 .ghost/

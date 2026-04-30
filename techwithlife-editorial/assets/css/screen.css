@@ -356,6 +356,10 @@ button {
     column-gap: 2rem;
 }
 
+.index-column {
+    counter-reset: index-item;
+}
+
 .index-title,
 .section-heading h2,
 .read-next h2 {
@@ -385,6 +389,11 @@ button {
     font-family: var(--font-serif);
     font-size: 2.4rem;
     line-height: 0.9;
+}
+
+.index-number::before {
+    counter-increment: index-item;
+    content: counter(index-item);
 }
 
 .index-item h3 {
@@ -738,7 +747,7 @@ button {
 
 .site-footer-inner {
     display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--grid-gap);
     align-items: start;
 }
@@ -747,10 +756,6 @@ button {
     margin: 0.85rem 0 0;
     color: var(--color-muted);
     font-size: 0.88rem;
-}
-
-.site-footer-nav .nav {
-    justify-content: center;
 }
 
 .site-copyright {
@@ -875,10 +880,6 @@ button {
 
     .site-footer-inner {
         grid-template-columns: 1fr;
-    }
-
-    .site-footer-nav .nav {
-        justify-content: flex-start;
     }
 
     .site-copyright {

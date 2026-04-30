@@ -37,7 +37,7 @@
                 <h2 class="index-title">The<br>Index</h2>
                 {{#foreach posts from="2" to="6"}}
                     <article class="index-item">
-                        <span class="index-number">{{@number}}</span>
+                        <span class="index-number" aria-hidden="true"></span>
                         <div>
                             <h3><a href="{{url}}">{{title}}</a></h3>
                             <p>{{#if primary_tag}}{{primary_tag.name}}{{else}}Latest{{/if}}</p>
@@ -65,10 +65,84 @@
             {{/foreach}}
         {{/match}}
 
-        {{> "topic-section" section_title="Reports" tag_slug="reports"}}
-        {{> "topic-section" section_title="AI" tag_slug="ai"}}
-        {{> "topic-section" section_title="Guides" tag_slug="buying-guides"}}
-        {{> "topic-section" section_title="Reviews" tag_slug="reviews"}}
-        {{> "topic-section" section_title="Life" tag_slug="life"}}
+        {{#get "posts" filter="tag:reports" include="tags,authors" limit="4" as |reports_posts|}}
+            {{#match reports_posts.length ">" 0}}
+                <section class="topic-section">
+                    <div class="section-heading">
+                        <h2>Reports</h2>
+                        <a class="text-link" href="/tag/reports/">More Reports</a>
+                    </div>
+                    <div class="topic-grid">
+                        {{#foreach reports_posts}}
+                            {{> "post-card" card_class="topic-card" title_size="small"}}
+                        {{/foreach}}
+                    </div>
+                </section>
+            {{/match}}
+        {{/get}}
+
+        {{#get "posts" filter="tag:ai" include="tags,authors" limit="4" as |ai_posts|}}
+            {{#match ai_posts.length ">" 0}}
+                <section class="topic-section">
+                    <div class="section-heading">
+                        <h2>AI</h2>
+                        <a class="text-link" href="/tag/ai/">More AI</a>
+                    </div>
+                    <div class="topic-grid">
+                        {{#foreach ai_posts}}
+                            {{> "post-card" card_class="topic-card" title_size="small"}}
+                        {{/foreach}}
+                    </div>
+                </section>
+            {{/match}}
+        {{/get}}
+
+        {{#get "posts" filter="tag:buying-guides" include="tags,authors" limit="4" as |guide_posts|}}
+            {{#match guide_posts.length ">" 0}}
+                <section class="topic-section">
+                    <div class="section-heading">
+                        <h2>Guides</h2>
+                        <a class="text-link" href="/tag/buying-guides/">More Guides</a>
+                    </div>
+                    <div class="topic-grid">
+                        {{#foreach guide_posts}}
+                            {{> "post-card" card_class="topic-card" title_size="small"}}
+                        {{/foreach}}
+                    </div>
+                </section>
+            {{/match}}
+        {{/get}}
+
+        {{#get "posts" filter="tag:reviews" include="tags,authors" limit="4" as |review_posts|}}
+            {{#match review_posts.length ">" 0}}
+                <section class="topic-section">
+                    <div class="section-heading">
+                        <h2>Reviews</h2>
+                        <a class="text-link" href="/tag/reviews/">More Reviews</a>
+                    </div>
+                    <div class="topic-grid">
+                        {{#foreach review_posts}}
+                            {{> "post-card" card_class="topic-card" title_size="small"}}
+                        {{/foreach}}
+                    </div>
+                </section>
+            {{/match}}
+        {{/get}}
+
+        {{#get "posts" filter="tag:life" include="tags,authors" limit="4" as |life_posts|}}
+            {{#match life_posts.length ">" 0}}
+                <section class="topic-section">
+                    <div class="section-heading">
+                        <h2>Life</h2>
+                        <a class="text-link" href="/tag/life/">More Life</a>
+                    </div>
+                    <div class="topic-grid">
+                        {{#foreach life_posts}}
+                            {{> "post-card" card_class="topic-card" title_size="small"}}
+                        {{/foreach}}
+                    </div>
+                </section>
+            {{/match}}
+        {{/get}}
     </div>
 </main>
