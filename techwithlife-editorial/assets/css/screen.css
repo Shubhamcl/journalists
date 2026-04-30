@@ -40,11 +40,11 @@ body.nav-open {
 a {
     color: inherit;
     text-decoration: none;
+    transition: color 160ms ease, opacity 160ms ease, border-color 160ms ease;
 }
 
 a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    color: var(--color-muted);
 }
 
 img {
@@ -467,11 +467,17 @@ button {
 }
 
 .text-link:hover {
+    color: var(--color-muted);
+    border-color: currentColor;
     text-decoration: none;
 }
 
 .text-link.inverted {
     color: #fff;
+}
+
+.text-link.inverted:hover {
+    color: #cacaca;
 }
 
 .topic-section,
@@ -675,9 +681,14 @@ button {
 }
 
 .gh-content a {
+    color: inherit;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+}
+
+.gh-content a:hover {
+    color: var(--color-muted);
 }
 
 .gh-content img {
