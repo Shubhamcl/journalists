@@ -130,6 +130,21 @@ Life
 
 Do not create top navigation tabs or homepage sections for every tag. Company/product tags remain useful for archive pages, related content, search, and SEO, but they should not drive the top-level site structure.
 
+The primary navigation should use this fixed order:
+
+```text
+Home
+AI
+Life
+Apps
+Gadgets
+Guides
+Platforms
+About
+```
+
+This is intentionally not alphabetical. It reflects the desired editorial emphasis and keeps reader-facing sections ahead of the About page.
+
 ## Workflow Impact
 
 Future Ghost drafts should enforce the same tag order. The publisher scripts were updated so `create_draft.mjs` and `update_post.mjs` require at least one of the seven main section tags and reorder tags into:

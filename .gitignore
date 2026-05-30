@@ -18,6 +18,7 @@ yarn-error.log*
 techwithlife-editorial-local-*.png
 live-techwithlife-*.png
 live-tags-*.png
+nav-check-*.png
 
 # Local Ghost/runtime data
 .ghost/
