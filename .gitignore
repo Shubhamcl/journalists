@@ -17,6 +17,7 @@ yarn-error.log*
 *.zip
 techwithlife-editorial-local-*.png
 live-techwithlife-*.png
+live-tags-*.png
 
 # Local Ghost/runtime data
 .ghost/

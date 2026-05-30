@@ -17,6 +17,53 @@ function parseArgs(argv) {
   return args;
 }
 
+const MAIN_SECTION_TAGS = new Set([
+  'AI',
+  'Apps',
+  'Platforms',
+  'Gadgets',
+  'Guides',
+  'Reviews',
+  'Life',
+]);
+
+const ARTICLE_TYPE_TAGS = new Set([
+  'Reports',
+  'Explainers',
+  'Buying Guides',
+  'Reviews',
+  'Opinion',
+  'Roundups',
+]);
+
+function normalizeTags(rawTags) {
+  const names = rawTags
+    .split(',')
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+
+  const section = names.find((name) => MAIN_SECTION_TAGS.has(name));
+
+  if (!section) {
+    throw new Error(`Tags must include one main section first: ${[...MAIN_SECTION_TAGS].join(', ')}`);
+  }
+
+  const seen = new Set();
+  const ordered = [
+    section,
+    ...names.filter((name) => name !== section && ARTICLE_TYPE_TAGS.has(name)),
+    ...names.filter((name) => name !== section && !ARTICLE_TYPE_TAGS.has(name)),
+  ].filter((name) => {
+    if (seen.has(name)) {
+      return false;
+    }
+    seen.add(name);
+    return true;
+  });
+
+  return ordered.map((name) => ({ name }));
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const title = args.title;
@@ -31,11 +78,7 @@ async function main() {
       ? (await uploadImage(args['feature-image-file'], args['feature-image-ref'] ?? args['feature-image-file'])).url
       : args['feature-image-url'] ?? undefined;
   const featureImageAlt = args['feature-image-alt'] ?? '';
-  const tags = (args.tags ?? '')
-    .split(',')
-    .map((tag) => tag.trim())
-    .filter(Boolean)
-    .map((tag) => ({ name: tag }));
+  const tags = normalizeTags(args.tags ?? '');
 
   if (!title) {
     throw new Error('Usage: node scripts/create_draft.mjs --title "..." [--slug "..."] [--excerpt "..."] [--tags "Tag 1,Tag 2"] [--html "<p>...</p>"] [--html-file "/path/to/file.html"]');

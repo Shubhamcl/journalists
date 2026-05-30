@@ -132,3 +132,26 @@ Every article must be labeled in the working brief as one of:
 - compares multiple options or developments using explicit criteria
 
 When the piece is opinion, say so clearly in the brief and opening framing.
+
+## 5. Tag order and site sections
+
+Every post must use one main section tag first:
+
+- AI
+- Apps
+- Platforms
+- Gadgets
+- Guides
+- Reviews
+- Life
+
+The first public tag is reader-facing and appears as the primary section label in the theme. Do not put company or product tags first.
+
+Article-type tags should come next, followed by entity/topic tags.
+
+Examples:
+
+- AI, Reports, OpenAI, ChatGPT, Codex
+- Platforms, Reports, Google, Samsung, Android XR
+- Apps, Reports, Spotify, Streaming, Families
+- Guides, Buying Guides, Apple, MacBook Pro, Laptops

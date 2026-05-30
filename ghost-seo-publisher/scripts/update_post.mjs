@@ -17,12 +17,59 @@ function parseArgs(argv) {
   return args;
 }
 
+const MAIN_SECTION_TAGS = new Set([
+  'AI',
+  'Apps',
+  'Platforms',
+  'Gadgets',
+  'Guides',
+  'Reviews',
+  'Life',
+]);
+
+const ARTICLE_TYPE_TAGS = new Set([
+  'Reports',
+  'Explainers',
+  'Buying Guides',
+  'Reviews',
+  'Opinion',
+  'Roundups',
+]);
+
+function normalizeTags(rawTags) {
+  const names = rawTags
+    .split(',')
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+
+  const section = names.find((name) => MAIN_SECTION_TAGS.has(name));
+
+  if (!section) {
+    throw new Error(`Tags must include one main section first: ${[...MAIN_SECTION_TAGS].join(', ')}`);
+  }
+
+  const seen = new Set();
+  const ordered = [
+    section,
+    ...names.filter((name) => name !== section && ARTICLE_TYPE_TAGS.has(name)),
+    ...names.filter((name) => name !== section && !ARTICLE_TYPE_TAGS.has(name)),
+  ].filter((name) => {
+    if (seen.has(name)) {
+      return false;
+    }
+    seen.add(name);
+    return true;
+  });
+
+  return ordered.map((name) => ({ name }));
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const id = args.id;
 
   if (!id) {
-    throw new Error('Usage: node scripts/update_post.mjs --id "post_id" [--title "..."] [--slug "..."] [--excerpt "..."] [--html-file "/path/to/file.html"] [--feature-image-file "/path/to/file.jpg"]');
+    throw new Error('Usage: node scripts/update_post.mjs --id "post_id" [--title "..."] [--slug "..."] [--excerpt "..."] [--tags "AI,Reports,OpenAI"] [--html-file "/path/to/file.html"] [--feature-image-file "/path/to/file.jpg"]');
   }
 
   const patch = {};
@@ -37,6 +84,10 @@ async function main() {
 
   if (args.excerpt) {
     patch.custom_excerpt = args.excerpt;
+  }
+
+  if (args.tags) {
+    patch.tags = normalizeTags(args.tags);
   }
 
   if (args.html) {

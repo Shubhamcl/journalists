@@ -43,4 +43,4 @@ Tech, life, or hybrid
 
 - slug idea
 - excerpt
-- proposed tags
+- proposed tags, ordered as: main section first, article type second, company/product/topic tags after

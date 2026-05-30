@@ -38,6 +38,52 @@ They are likely to care about:
 
 ## Content buckets
 
+## Site taxonomy
+
+Use a small set of durable reader-facing section tags as the first public tag on every post:
+
+- AI
+- Apps
+- Platforms
+- Gadgets
+- Guides
+- Reviews
+- Life
+
+The first public tag is the visible section label in the Ghost theme. It should not usually be a company, product, or narrow topic tag.
+
+Use article-type tags after the section tag:
+
+- Reports
+- Explainers
+- Buying Guides
+- Reviews
+- Opinion
+- Roundups
+
+Use company, product, and topic tags after those:
+
+- Google
+- Meta
+- OpenAI
+- Apple
+- Samsung
+- Spotify
+- Chrome
+- Android XR
+- MacBook Pro
+- AWS
+- Gemini
+
+Good tag order examples:
+
+- AI, Reports, OpenAI, ChatGPT, Codex
+- Platforms, Reports, Meta, Facebook, Instagram, Security
+- Apps, Reports, Spotify, Streaming, Families
+- Guides, Buying Guides, Apple, MacBook Pro, Laptops
+
+Do not create top navigation or homepage sections for every tag. Only the main section tags should behave like site sections.
+
 ### Tech news and launches
 
 Primary topics:
