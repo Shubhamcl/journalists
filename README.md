@@ -8,6 +8,7 @@ Editorial tooling and Ghost theme work for Tech With Life.
 - `drafts/` - Local article briefs and HTML drafts.
 - `references/NewsMagazineRef/` - Static reference designs used for the magazine theme.
 - `techwithlife-editorial/` - Custom Ghost theme source for Tech With Life.
+- `decisions/` - Durable editorial, product, taxonomy, and theme decisions.
 
 ## Ghost Theme
 
