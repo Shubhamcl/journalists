@@ -7,9 +7,10 @@
         <h1>{{name}}</h1>
         {{#if description}}<p>{{description}}</p>{{/if}}
     </header>
+{{/tag}}
 
     <section class="container archive-grid">
-        {{#foreach ../posts}}
+        {{#foreach posts}}
             {{> "post-card" card_class="archive-card" title_size="small"}}
         {{/foreach}}
     </section>
@@ -18,4 +19,3 @@
         {{pagination}}
     </div>
 </main>
-{{/tag}}
