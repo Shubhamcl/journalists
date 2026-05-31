@@ -30,7 +30,7 @@ KimptonAI, AI for portfolio managers, AI investment research platform, AI buy si
 
 ## Search intent
 
-Readers want to know what Kimpton AI is, what it does, who it is for, and whether it is a trading bot or research assistant.
+Readers want to know what Kimpton AI is, what it does, who it is for, whether it is a trading bot, and whether AI can be trusted inside professional investment workflows.
 
 ## Existing site overlap
 
@@ -52,5 +52,5 @@ Readers want to know what Kimpton AI is, what it does, who it is for, and whethe
 ## Draft metadata
 
 - slug idea: kimpton-ai-portfolio-managers
-- excerpt: Kimpton AI is pitching an AI-native research platform for portfolio managers, with a key distinction: it wants to support investment decisions, not replace the investor.
+- excerpt: Kimpton AI is pitching an AI analyst for portfolio managers, but the hard part is not summarizing finance data. It is earning trust inside high-stakes investment workflows.
 - proposed tags, ordered as: AI, Explainers, KimptonAI, Finance, Startups, Investing

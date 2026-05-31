@@ -42,7 +42,7 @@ Readers want an informed answer to whether AI makes it easier or more normal to 
 - primary source 1: https://www.census.gov/econ/bfs/current/index.html
 - primary source 2: https://www.anthropic.com/news/claude-for-small-business
 - primary source 3: https://www.anthropic.com/research/anthropic-economic-index-september-2025-report
-- secondary/source context: Microsoft WorkLab/Work Trend Index material on AI agents and frontier firms
+- secondary/source context: broader workplace AI adoption and solo-founder discussion
 
 ## Image plan
 
@@ -53,5 +53,5 @@ Readers want an informed answer to whether AI makes it easier or more normal to 
 ## Draft metadata
 
 - slug idea: quit-job-start-ai-company-new-normal
-- excerpt: AI tools are making it easier to test a company before quitting, but the new normal may be smaller teams and side projects first, not everyone walking out to become a founder.
-- proposed tags, ordered as: Life, Analysis, AI, Work, Startups, Entrepreneurship
+- excerpt: AI is not making quitting risk-free. It is making it easier to test founder-like ideas before the resignation becomes the point of no return.
+- proposed tags, ordered as: Life, Explainers, AI, Work, Startups, Entrepreneurship

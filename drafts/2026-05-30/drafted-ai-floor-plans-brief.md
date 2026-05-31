@@ -30,7 +30,7 @@ Drafted.ai, AI house plan generator, AI home design, free AI house plans, AI flo
 
 ## Search intent
 
-Readers want to know what Drafted.ai is, how it works, whether it is useful, and why the startup is getting attention.
+Readers want to know what Drafted.ai is, whether its AI floor plans are useful, and where the product stops before real architecture, permits, and construction work begin.
 
 ## Existing site overlap
 
@@ -52,5 +52,5 @@ Readers want to know what Drafted.ai is, how it works, whether it is useful, and
 ## Draft metadata
 
 - slug idea: drafted-ai-floor-plans-home-design
-- excerpt: Drafted.ai is turning AI home design into a consumer product: free floor plans, CAD files, and a startup bet that residential architecture can become more interactive.
+- excerpt: Drafted.ai is making AI floor plans feel approachable, but the real test is whether it can turn early home ideas into useful design conversations without overselling what AI can build.
 - proposed tags, ordered as: AI, Explainers, DraftedAI, Drafted.ai, Home Design, Architecture, Startups
