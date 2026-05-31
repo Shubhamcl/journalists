@@ -86,10 +86,12 @@ The article itself should include:
 - scannable structure with strong H2s
 - natural source links where factual claims depend on reporting, specs, support docs, or announcements
 - original examples, screenshots, or concrete product details where possible
-- FAQ section when it helps search intent
+- visible FAQ blocks only when the format genuinely calls for them, such as buying guides, how-to guides, troubleshooting pieces, comparison articles, or evergreen explainers where question format improves readability
 - tags relevant to the site taxonomy
 - image plan that follows `references/image_policy.md`
 - source notes that support factual claims
+
+Do not add FAQ sections by default for reports, startup profiles, analysis, opinion, or news-style explainers. For those pieces, fold common reader questions naturally into the article body instead of exposing SEO scaffolding.
 
 ### 5. Create the Ghost draft
 

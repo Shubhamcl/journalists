@@ -155,3 +155,25 @@ Examples:
 - Platforms, Reports, Google, Samsung, Android XR
 - Apps, Reports, Spotify, Streaming, Families
 - Guides, Buying Guides, Apple, MacBook Pro, Laptops
+
+## 6. FAQ usage
+
+Visible FAQ sections are not a default SEO tactic for Tech With Life.
+
+Use a visible FAQ block only when the article format genuinely benefits from question-and-answer scanning, such as:
+
+- buying guides
+- how-to guides
+- troubleshooting articles
+- comparison articles
+- evergreen explainers where reader intent is clearly question-led
+
+Avoid visible FAQ sections for:
+
+- reports
+- startup profiles
+- analysis pieces
+- opinion pieces
+- news-style explainers
+
+For those pieces, answer likely reader questions inside the body with normal editorial structure. Do not expose SEO machinery to the reader when a more natural paragraph or section can do the same job.

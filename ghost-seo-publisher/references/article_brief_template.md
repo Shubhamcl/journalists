@@ -22,6 +22,11 @@ Tech, life, or hybrid
 
 ## Search intent
 
+## FAQ decision
+
+- visible FAQ needed: yes/no
+- reason
+
 ## Existing site overlap
 
 - closest existing post
