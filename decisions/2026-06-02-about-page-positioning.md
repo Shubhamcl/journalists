@@ -41,3 +41,9 @@ Technology no longer waits at the edge of life.
 ## Practical Impact
 
 Future About page edits should preserve the idea that Tech With Life covers technology where it touches ordinary human life, not merely as an industry of products, companies, and announcements.
+
+## Refinements
+
+The About page should stay editorial, but not become abstract all the way through. It should include at least one concrete grounding section that explains what the publication follows: AI systems, apps, platforms, gadgets, and practical guides, with emphasis on what those changes ask of people.
+
+Generic Ghost or blog-default language should be avoided around this page. Footer copy, metadata, and page styling should support the same publication identity.

@@ -8,6 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset "css/screen.css"}}">
     {{ghost_head}}
+    {{#is "page"}}
+        {{#post}}
+            {{#match slug "about"}}
+                <meta property="og:type" content="website">
+                <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "{{title}}",
+    "description": "{{custom_excerpt}}",
+    "url": "{{url absolute="true"}}",
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{@site.title}}",
+        "url": "{{@site.url}}"
+    }
+}
+                </script>
+            {{/match}}
+        {{/post}}
+    {{/is}}
 </head>
 <body class="{{body_class}} twl-theme {{#match @custom.sticky_header true}}has-sticky-header{{/match}}">
     <div class="site-shell">
