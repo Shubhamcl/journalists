@@ -45,9 +45,9 @@ Readers want to know what Drafted.ai is, whether its AI floor plans are useful, 
 
 ## Image plan
 
-- hero image source type: original screenshot of Drafted homepage
+- hero image source type: selected editorial image, `images/drafted-ai-modern-apartment-interior.png`
 - in-body visuals needed: none for v1
-- license notes if not original: screenshot captured by us for editorial commentary
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 

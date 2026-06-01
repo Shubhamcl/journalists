@@ -45,9 +45,9 @@ Readers want to know what Kimpton AI is, what it does, who it is for, whether it
 
 ## Image plan
 
-- hero image source type: original editorial graphic based on sourced product positioning
+- hero image source type: selected editorial image, `images/kimpton-ai-digital-financial-chart.png`
 - in-body visuals needed: none for v1
-- license notes if not original: original graphic created in repo
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 

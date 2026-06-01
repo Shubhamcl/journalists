@@ -46,9 +46,9 @@ Readers want an informed answer to whether AI makes it easier or more normal to 
 
 ## Image plan
 
-- hero image source type: original editorial graphic
+- hero image source type: selected editorial image, `images/ai-solo-founder-monochromatic-meeting.png`
 - in-body visuals needed: none for v1
-- license notes if not original: original graphic created in repo
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 
