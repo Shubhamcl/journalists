@@ -152,6 +152,17 @@ export async function listPosts(limit = 100) {
   return parsed.posts ?? [];
 }
 
+export async function listPages(limit = 100) {
+  const { apiUrl, adminApiKey } = loadConfig();
+  const parsed = await ghostRequest({
+    apiUrl,
+    adminApiKey,
+    method: 'GET',
+    endpoint: `/ghost/api/admin/pages/?limit=${limit}&include=tags,authors&formats=html`,
+  });
+  return parsed.pages ?? [];
+}
+
 export async function getPost(id) {
   const { apiUrl, adminApiKey } = loadConfig();
   const parsed = await ghostRequest({
@@ -161,6 +172,17 @@ export async function getPost(id) {
     endpoint: `/ghost/api/admin/posts/${id}/?formats=html&include=tags,authors`,
   });
   return parsed.posts?.[0];
+}
+
+export async function getPage(id) {
+  const { apiUrl, adminApiKey } = loadConfig();
+  const parsed = await ghostRequest({
+    apiUrl,
+    adminApiKey,
+    method: 'GET',
+    endpoint: `/ghost/api/admin/pages/${id}/?formats=html&include=tags,authors`,
+  });
+  return parsed.pages?.[0];
 }
 
 export async function updatePost(id, patch) {
@@ -187,6 +209,32 @@ export async function updatePost(id, patch) {
   });
 
   return parsed.posts?.[0];
+}
+
+export async function updatePage(id, patch) {
+  const { apiUrl, adminApiKey } = loadConfig();
+  const current = await getPage(id);
+
+  if (!current) {
+    throw new Error(`Page not found: ${id}`);
+  }
+
+  const parsed = await ghostRequest({
+    apiUrl,
+    adminApiKey,
+    method: 'PUT',
+    endpoint: `/ghost/api/admin/pages/${id}/?source=html`,
+    body: {
+      pages: [
+        {
+          updated_at: current.updated_at,
+          ...patch,
+        },
+      ],
+    },
+  });
+
+  return parsed.pages?.[0];
 }
 
 export async function uploadImage(filePath, ref = path.basename(filePath)) {

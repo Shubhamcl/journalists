@@ -14,3 +14,4 @@ Use it for choices that should survive beyond a single chat thread, especially d
 ## Records
 
 - [2026-05-30 editorial taxonomy](2026-05-30-editorial-taxonomy.md)
+- [2026-06-02 about page positioning](2026-06-02-about-page-positioning.md)
