@@ -531,7 +531,14 @@ button {
     font-size: 5.3rem;
 }
 
-.article-header p,
+.article-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #333333;
+    font-size: 1.28rem;
+    line-height: 1.58;
+}
+
 .archive-header p,
 .error-card p {
     max-width: 650px;
@@ -929,10 +936,14 @@ button {
     }
 
     .hero-excerpt,
-    .article-header p,
     .archive-header p,
     .error-card p {
         font-size: 1rem;
+    }
+
+    .article-header p {
+        font-size: 1.06rem;
+        line-height: 1.62;
     }
 
     .topic-grid,
