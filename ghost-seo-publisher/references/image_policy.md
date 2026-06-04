@@ -55,10 +55,23 @@ The hero image should:
 - support social sharing previews
 - avoid misleading claims
 - match the tone of the site
+- work as a homepage card without browser chrome, cookie banners, navigation bars, oversized page headlines, or large blank margins
+- show the product, device, interface, person, or scene itself rather than a full webpage around it
 
 Do not use the same visual template so aggressively that every article looks identical.
 
 When the article is about a specific real product or announcement, prefer a real image of that product rather than an abstract concept image.
+
+For product/news articles, do not default to full-page screenshots. First inspect the official page HTML, press room, or media kit for a direct image asset. Use a cropped webpage screenshot only when the page UI itself is the story or no clean product image exists.
+
+Before attaching a hero image, visually inspect it at card size and reject images that:
+
+- duplicate the article headline inside the image
+- look like a presentation slide
+- rely on tiny UI text to be understood
+- contain visible browser/page furniture
+- would crop awkwardly in a 16:9 or square card
+- feel generic or disconnected from the article's actual angle
 
 ## SEO and performance rules
 

@@ -51,9 +51,9 @@ Readers want a practical answer about whether Apple Intelligence is useful in da
 
 ## Image plan
 
-- hero image source type: original screenshot of official Apple Intelligence page, `images/apple-intelligence-newsroom.png`
+- hero image source type: official Apple Newsroom image, `images/apple-intelligence-devices-2024.jpg`
 - in-body visuals needed: none for v1
-- license notes if not original: screenshot captured by us for editorial commentary
+- license notes if not original: official Apple Newsroom product image used for editorial context
 
 ## Draft metadata
 
