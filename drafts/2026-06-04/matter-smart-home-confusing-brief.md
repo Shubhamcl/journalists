@@ -51,9 +51,9 @@ Readers want to understand what Matter does, why Matter devices still require hu
 
 ## Image plan
 
-- hero image source type: original screenshot of CSA Matter page, `images/matter-smart-home-csa.png`
+- hero image source type: user-selected editorial image, `images/matter-smart-home-artistic-kitchen.png`
 - in-body visuals needed: none for v1
-- license notes if not original: screenshot captured by us for editorial commentary
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 

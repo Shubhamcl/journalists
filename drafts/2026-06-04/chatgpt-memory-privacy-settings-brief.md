@@ -51,9 +51,9 @@ Readers want a practical guide to ChatGPT memory, privacy, temporary chats, data
 
 ## Image plan
 
-- hero image source type: original screenshot of OpenAI Memory FAQ page, `images/chatgpt-memory-openai-help.png`
+- hero image source type: user-selected editorial image, `images/chatgpt-memory-paperwork.png`
 - in-body visuals needed: none for v1
-- license notes if not original: screenshot captured by us for editorial commentary
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 

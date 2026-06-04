@@ -52,9 +52,9 @@ Readers want practical buying advice on which AI services are worth paying for, 
 
 ## Image plan
 
-- hero image source type: original screenshot of official Google AI subscriptions page, `images/ai-subscriptions-google-ai.png`
+- hero image source type: user-selected editorial image, `images/ai-subscriptions-compare-icons.png`
 - in-body visuals needed: none for v1
-- license notes if not original: screenshot captured by us for editorial commentary
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 

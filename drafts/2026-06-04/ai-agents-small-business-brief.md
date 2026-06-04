@@ -51,9 +51,9 @@ Readers want to know whether AI agents are practically useful for small business
 
 ## Image plan
 
-- hero image source type: original screenshot of Microsoft Work Trend Index page, `images/ai-agents-small-business-microsoft-wti.png`
+- hero image source type: user-selected editorial image, `images/ai-agents-small-business-unity-activism.png`
 - in-body visuals needed: none for v1
-- license notes if not original: screenshot captured by us for editorial commentary
+- license notes if not original: user-selected image from local Downloads folder
 
 ## Draft metadata
 
