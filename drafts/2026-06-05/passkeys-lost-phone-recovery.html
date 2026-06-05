@@ -1,0 +1,75 @@
+<p><strong>Passkeys are supposed to end the worst parts of passwords.</strong> They cannot be guessed, phished in the usual way, or reused across a dozen websites. You unlock them with the same fingerprint, face scan, or device PIN you already use.</p>
+
+<p>Then comes the obvious anxiety: what happens when that device disappears?</p>
+
+<p>For most people using passkeys through Apple, Google, or a password manager, losing a phone does not automatically mean losing every account. Many passkeys are designed to sync securely across trusted devices and can be recovered through the account or credential manager that stores them.</p>
+
+<p>But "many" is not "all." Understanding the difference between synced and device-bound passkeys is the key to avoiding a nasty surprise.</p>
+
+<h2>A passkey is a credential, not a fingerprint</h2>
+
+<p>When a site creates a passkey, it produces a cryptographic key pair. The site keeps the public half. Your device or passkey provider keeps the private half. Signing in proves that you hold the private key without sending that secret to the site.</p>
+
+<p>Your fingerprint or face is not handed to the website. It is normally used locally to unlock the credential. The <a href="https://fidoalliance.org/passkeys/">FIDO Alliance's passkey explainer</a> describes passkeys as a replacement for passwords that can resist phishing and remove the need to remember shared secrets.</p>
+
+<p>This architecture is why a fake login page cannot simply collect a passkey the way it can collect a password. It is also why recovery works differently from clicking "forgot password."</p>
+
+<h2>Most consumer passkeys are synced</h2>
+
+<p>Passkeys stored in iCloud Keychain, Google Password Manager, or a compatible password manager can usually sync between your devices. If your phone is lost but you still have a trusted laptop, tablet, or another phone connected to the same credential provider, your passkeys may already be there.</p>
+
+<p>Apple's <a href="https://support.apple.com/guide/security/passkeys-and-the-icloud-keychain-sec7c5049f0e/web">platform security guide</a> says passkeys in iCloud Keychain sync across a user's Apple devices with end-to-end encryption. Google has also described a <a href="https://blog.google/technology/safety-security/google-password-manager-passkeys-update-september-2024/">Google Password Manager PIN</a> used to help securely sync and recover passkeys across devices.</p>
+
+<p>In that common setup, replacing a lost phone is closer to restoring an encrypted keychain than recreating every login from scratch. You regain access to the Apple, Google, or password-manager account, complete its recovery process, and the synced credentials return to the new device.</p>
+
+<h2>Device-bound passkeys are different</h2>
+
+<p>Some passkeys are intentionally tied to one physical device, often for higher-security or organizational use. Hardware security keys are a familiar example: the credential lives on the key rather than syncing through a consumer cloud account.</p>
+
+<p>If the only copy of a device-bound passkey is on a phone or security key that is lost, the passkey itself may be gone. Access then depends on another registered passkey, a backup security key, recovery codes, an account-recovery process, or help from the service or organization.</p>
+
+<p>This is not necessarily a flaw. Preventing a credential from being copied can be the security goal. It simply means the backup plan must be deliberate.</p>
+
+<h2>The real risk is losing the recovery chain</h2>
+
+<p>A phone is often more than a passkey holder. It may receive recovery messages, generate two-factor codes, store recovery codes, and approve access to the cloud account that syncs your passkeys. Losing it can remove several recovery methods at once.</p>
+
+<p>That is why a person can be technically protected by synced passkeys and still struggle to regain access. The weak point is not the passkey. It is an account-recovery setup that depends entirely on one device.</p>
+
+<p>The same problem existed with passwords, but passkeys make it easier to overlook because daily sign-in feels so effortless.</p>
+
+<h2>What to set up before losing a phone</h2>
+
+<p><strong>Keep more than one trusted device.</strong> A laptop, tablet, or second phone signed into the same passkey provider can become the easiest route back in.</p>
+
+<p><strong>Protect the account that syncs your passkeys.</strong> Review the recovery phone number, recovery email, trusted devices, and any recovery keys for your Apple, Google, or password-manager account.</p>
+
+<p><strong>Save recovery codes away from the phone.</strong> Important services often provide one-time codes. Store them somewhere secure that does not disappear with the device, such as an encrypted vault with an independent recovery plan or a protected physical copy.</p>
+
+<p><strong>Register a second method on critical accounts.</strong> For email, banking, work, and the account that holds your passkeys, add another passkey or hardware security key where the service allows it.</p>
+
+<p><strong>Know which provider holds the credential.</strong> Passkeys can live in different ecosystems. A person using an iPhone, a Windows computer, Chrome, and a third-party password manager may have credentials in more than one place.</p>
+
+<h2>What to do after the phone is lost</h2>
+
+<p>First, use the platform's lost-device controls to lock or erase the phone remotely. A properly locked modern phone protects passkeys behind device authentication, but removing the missing device from trusted-device lists is still sensible.</p>
+
+<p>Next, use another trusted device to access the passkey provider and important accounts. If no trusted device remains, begin recovery through the provider. That may involve account credentials, recovery contacts, a recovery key, a PIN, or a waiting period designed to stop attackers.</p>
+
+<p>Finally, review critical services and remove the lost device or old passkey where appropriate. Create a new passkey on the replacement phone and confirm that the backup path still works.</p>
+
+<h2>Passkeys are safer, but recovery still belongs to you</h2>
+
+<p>Passkeys remove several dangerous password habits. They make phishing much harder and eliminate the need to invent, remember, and reuse passwords. They do not eliminate account recovery.</p>
+
+<p>For ordinary users, losing a phone usually does not mean losing all passkeys because the credentials are often synced. The serious risk appears when one phone is also the only trusted device, the only recovery method, and the only place where backup codes live.</p>
+
+<p>The right preparation is boring and effective: keep a second path into important accounts. Passkeys can make signing in simpler, but no security system should make one pocket-sized device the only door back into your digital life.</p>
+
+<h2>Sources</h2>
+
+<ul>
+  <li><a href="https://fidoalliance.org/passkeys/">FIDO Alliance: Passkeys</a></li>
+  <li><a href="https://support.apple.com/guide/security/passkeys-and-the-icloud-keychain-sec7c5049f0e/web">Apple Platform Security: Passkeys and iCloud Keychain</a></li>
+  <li><a href="https://blog.google/technology/safety-security/google-password-manager-passkeys-update-september-2024/">Google: Google Password Manager passkey sync</a></li>
+</ul>
