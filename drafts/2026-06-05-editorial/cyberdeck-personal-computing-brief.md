@@ -51,9 +51,9 @@ Readers want to understand what cyberdecks are and why people build impractical,
 
 ## Image plan
 
-- hero image source type: Cyberdeck Cafe community project image
-- in-body visuals needed: none for v1
-- license notes if not original: Cyberdeck Cafe project image used for editorial context; source page https://cyberdeck.cafe/
+- hero image source type: user-selected editorial image, `Futuristic Laptop Scene.png`
+- in-body visuals needed: Cyberdeck Cafe project image moved into the body after the purpose-built machines section
+- license notes if not original: hero is user-provided from local Downloads folder; in-body Cyberdeck Cafe image used for editorial context, source page https://cyberdeck.cafe/
 
 ## Draft metadata
 
