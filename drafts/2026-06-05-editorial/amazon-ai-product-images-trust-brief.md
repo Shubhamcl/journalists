@@ -50,9 +50,9 @@ Readers want to understand Amazon's new visual shopping feature and whether gene
 
 ## Image plan
 
-- hero image source type: official Amazon Lens Live product image from About Amazon
+- hero image source type: user-selected editorial illustration
 - in-body visuals needed: none for v1
-- license notes if not original: official Amazon product image used for editorial context; source page https://www.aboutamazon.com/news/retail/search-image-amazon-lens-live-shopping-rufus/
+- license notes if not original: user-provided image from local Downloads folder, `Discovery and Creativity.png`
 
 ## Draft metadata
 
