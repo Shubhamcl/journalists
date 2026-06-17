@@ -49,9 +49,9 @@ Readers want to understand the new automated Reply Rules feature and what it say
 
 ## Image plan
 
-- hero image source type: official Substack Reply Rules product image
+- hero image source type: user-selected editorial image, `Peaceful Protest Scene.png`
 - in-body visuals needed: none for v1
-- license notes if not original: official Substack product artwork used for editorial context; source page https://on.substack.com/p/introducing-reply-rules
+- license notes if not original: user-provided image from local Downloads folder
 
 ## Draft metadata
 
